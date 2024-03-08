@@ -19,7 +19,7 @@ pipeline {
                 script {
                     remote.password=env.RPI_CREDS_PSW
                 }
-                sshCommand remote: remote, command: "cd /home/master/.node-red && ls -lrt"
+                sshCommand remote: remote, command: "cd /home/master/.node-red && df -h"
                 // sshCommand remote: remote, command: "cd /home/master/.node-red && ./node-red-deployment.sh"
             }
         }
